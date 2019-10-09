@@ -10,21 +10,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-      function pasardatos()
-      {
+      function pasardatos(){
          document.getElementById('txtidentact').value=document.getElementById('txtident').value;
          document.getElementById('txtnombresact').value=document.getElementById('txtnombres').value;
          document.getElementById('txtemailact').value=document.getElementById('txtemail').value;
          document.getElementById('txtcontrasenaact').value=document.getElementById('txtcontrasena').value;
          document.getElementById('txtcontrasenacact').value=document.getElementById('txtcontrasenac').value;
-         aletr
       }
     </script>
 </head>
    <script>
       $(document).ready(function(){
-         setTimeout(function()
-         {
+         setTimeout(function(){
            $('.mensaje').text(""); 
          }, 5000);
       });
@@ -40,7 +37,7 @@
       echo form_open('cusuario/listausuarioxident');
       ?>
       <form>
-      Identificacion
+      Identificación
       <input type="text" id="txtident" name="txtident" calss="">
       <input type="submit" id="btnbuscar" name="btnbuscar" value="Buscar" class="btn btn-primary">
       </form>
@@ -48,9 +45,6 @@
       <?php
       echo form_close();
       ?>
-
-
-
    <!--Fin Buscar por identificación-->
 
     <?php
@@ -62,23 +56,18 @@
            <input type = "text" id = "txtid" name = "txtid" class="form-control" placeholder="Ingrese identificación" value="<?php echo set_value ('txtident') ?>">
            <small id="emailHelp" class="form-text text-muted">Nunca compartiremos su identid¿ficación con nadie</small>
       </div>
-      
       <div class="form-group">
           Nombres
            <input type = "text" id = "txtnombres" name = "txtnombres" class="form-control" placeholder="Ingrese un nombre" value="<?php echo set_value ('txtnombres') ?>">
       </div>
-
       <div class="form-group">
           Email
            <input type = "text" id = "txtemail" name = "txtemail" class="form-control" placeholder="Ingrese Correo" value="<?php echo set_value ('txtemail') ?>">
-           
       </div>
-
       <div class="form-group">
-          Contrasena
+          Contraseña
            <input type = "password" id = "txtcontrasena" name = "txtcontrasena" class="form-control" placeholder="Ingrese una Contraseña" value="<?php echo set_value ('txtcontrasena') ?>">
       </div>
-
       <div class="form-group">
         Confirmar contraseña </td>
          <input type = "password" id = "txtcontrasenac" name = "txtcontrasenac" class="form-control" placeholder="Confirme su contraseña" value="<?php echo set_value ('txtcontrasenac') ?>"> 
@@ -110,8 +99,6 @@
     <?php
       echo form_close();
     ?>
-
-
     <span style="color:red" class="mensaje">
       <?php 
          if (isset($mensaje))

@@ -21,13 +21,9 @@
             $datos['usuarios']="";
             //fin de codigo para listado de usuarios
             $this->form_validation->set_rules('txtid','Indentificación','required|min_length[6]|max_length[12]');
-
             $this->form_validation->set_rules('txtnombres','Nombres','trim|required|min_length[3]');
-
             $this->form_validation->set_rules('txtemail','Email','trim|required|valid_email');
-
             $this->form_validation->set_rules('txtcontrasena','Contraseña','trim|required|min_length[4]|max_length[12]');
-
             $this->form_validation->set_rules('txtcontrasenac','Confirmar contraseña','trim|required|matches[txtcontrasena]');
 
             $this->form_validation->set_message('required','el campo %s es obligatorio');

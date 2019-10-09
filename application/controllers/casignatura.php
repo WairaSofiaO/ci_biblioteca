@@ -20,11 +20,8 @@
             $datos['academia']=$listado;
             //fin de codigo para listado de usuarios
             $this->form_validation->set_rules('txtcodasig','Codigo Asignatura','required|min_length[1]|max_length[12]');
-
             $this->form_validation->set_rules('txtnombres','Nombres','trim|required|min_length[10]|max_length[30]');
-
             $this->form_validation->set_rules('txtintensidad','Intensidad','trim|required|min_length[1]|max_length[6]');
-
             $this->form_validation->set_rules('txtvalor','Valor','trim|required|greater_than[10000]');
 
             $this->form_validation->set_message('min_length','El campo %s debe tener como minimo %d caracteres');

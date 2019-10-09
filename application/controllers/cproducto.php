@@ -21,12 +21,10 @@
             $this->form_validation->set_message('max_length','El campo %s debe tener maximo %d catacteres');
             $this->form_validation->set_message('greater_than','El campo %s debe ser mayor a %d');
             $this->form_validation->set_message('greater_than','El campo %s debe ser superior a %d');
-            if ($this->form_validation->run()==FALSE) //Esto es para saber datos incorrectos en la vista vusuario
-            {
+            if ($this->form_validation->run()==FALSE) { //Esto es para saber datos incorrectos en la vista vusuario
                 $this->load->view('vproducto');
-            }
-            else
-            {
+            } 
+            else {
                 $this->load->view('welcome_message');
             }
         
